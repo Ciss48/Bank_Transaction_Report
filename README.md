@@ -30,6 +30,26 @@ Trước khi đến được bước làm dashboard, việc etl là việc khôn
  
  You can see Dashboard at Link: https://lookerstudio.google.com/reporting/9cf74dca-35fa-46bd-97b3-1b62c9b20e3c
 
+ ## Dashboard in Tableau
+
+ <img width="1509" height="804" alt="image" src="https://github.com/user-attachments/assets/b6d3075f-215e-4dd1-813d-70dc3a26febf" />
+
+ <img width="1507" height="798" alt="image" src="https://github.com/user-attachments/assets/f083473c-cdca-4387-bdb9-b478bfadea7d" />
+
+ <img width="1502" height="797" alt="image" src="https://github.com/user-attachments/assets/86a3dd3b-b2bc-4417-bbcc-34a524b7586b" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Customer_Segmentation
 Đây là bài toán Phân khúc khách hàng bằng cách sử dụng RFM và KMeans,  các bước cụ thể:
 - Thực hiện biến đổi dữ liệu để tạo ra dataframe với cột customer_id và 3 cột feature theo mô hình RFM
@@ -50,29 +70,45 @@ Trước khi đến được bước làm dashboard, việc etl là việc khôn
 Về khả năng xử lý dữ liệu
 - Power BI thể hiện ưu thế rõ rệt ở khả năng xử lý dữ liệu thô (raw data). Các hàm DAX trong Power BI cho phép tính toán phức tạp trực tiếp trên dữ liệu gốc mà không cần tiền xử lý nhiều. Các thao tác như tạo line chart so sánh theo tháng của năm trước, hoặc các phép tính rolling average, cumulative, year-over-year,… đều có thể thực hiện dễ dàng.
 - Ngược lại, trong Looker Studio, việc thực hiện các phép tính tương tự gần như rất khó hoặc bị giới hạn, do công cụ này phụ thuộc nhiều vào dữ liệu đã được xử lý và tổng hợp sẵn (grouped / pre-aggregated). → Vì vậy, Looker Studio phù hợp hơn khi dữ liệu đầu vào đã được chuẩn bị kỹ, chẳng hạn như đã group theo segment, date, hay metric cụ thể từ trước.
+- Tableau nằm ở giữa, cũng là 1 công cụ xử lý dữ liệu rất mạnh, làm việc với dữ liệu lớn tốt nhất trong 3 tool, tableau caculation khá linh hoạt và xử lý được đa dạng vấn đề 
 
 Về Khả năng chia sẻ và cộng tác: 
-- Ở khía cạnh chia sẻ báo cáo, Looker Studio vượt trội hơn rõ rệt. Người dùng có thể public dashboard lên web, hoặc phân quyền theo email nhanh chóng, thuận tiện cho việc cộng tác.
+- Ở khía cạnh chia sẻ báo cáo, Looker Studio vượt trội hơn rõ rệt. Người dùng có thể public dashboard lên web, hoặc phân quyền theo email nhanh chóng, thuận tiện cho việc cộng tác mà không tốn chi phí. 
 - Trong khi đó, Power BI yêu cầu một khoản chi phí nhất định để chia sẻ dashboard cho người khác. Khi số lượng người truy cập tăng lên, chi phí cấp quyền và license cũng tăng tương ứng.
-- Ngoài ra, Looker Studio hỗ trợ public và refresh dữ liệu linh hoạt hơn, giúp việc cập nhật dashboard diễn ra trơn tru hơn trong môi trường chia sẻ.
+- Tableau tương tự Power BI chia sẻ qua Tableau Server hoặc Tableau Online → giá khá cao.
 
 Về giao diện và trải nghiệm người dùng (phần này cần nhấn mạnh đây là cảm quan cá nhân):
 - Looker Studio mang đến giao diện hiện đại, trực quan, với các biểu đồ (chart) có thiết kế đẹp sẵn, chỉ cần kéo – thả là có được dashboard bắt mắt.
 - Power BI tuy mạnh về kỹ thuật, nhưng để có visual đẹp và chuẩn thẩm mỹ, người dùng cần đầu tư nhiều thời gian tinh chỉnh hơn (format chart, màu sắc, layout, theme,…).
+- Mạnh nhất trong 3 công cụ vì tableau tinh chỉnh rất kĩ từng biểu đồ, vì vậy có thể làm nổi bật lên những điểm nổi bật (dễ ra insight) trên 1 biểu đồ -> Là công cụ phù hợp với story telling dữ liệu nhất, tuy nhiên công cụ này lại rất khó trong việc căn chỉnh layout dashboard tổng
 
-Bảng so sánh tổng quan:
-| Tiêu chí                       | **Power BI**                                        | **Looker Studio**                                   |
-| ------------------------------ | --------------------------------------------------- | --------------------------------------------------- |
-| **Xử lý dữ liệu**              | Xuất sắc – DAX mạnh mẽ, xử lý tốt dữ liệu raw       | Hạn chế – cần dữ liệu đã được group/prepare sẵn     |
-| **Khả năng chia sẻ**           | Cần trả phí để chia sẻ, khó public web              | Miễn phí, chia sẻ qua email hoặc public dễ dàng     |
-| **Tự động cập nhật (refresh)** | Có, nhưng phụ thuộc license Power BI Service        | Dễ dàng, tự động hơn khi dùng data source online    |
-| **Giao diện và thẩm mỹ**       | Cần tùy chỉnh nhiều mới đẹp                         | Giao diện, chart mặc định đẹp, hiện đại             |
-| **Phù hợp với**                | Doanh nghiệp cần xử lý dữ liệu phức tạp, có team BI | Người dùng cá nhân, team nhỏ, dữ liệu đã được xử lý |
+Về hiệu năng & xử lý dữ liệu lớn: 
+- Looker Studio: yếu nhất, phụ thuộc data source; yếu với dữ liệu quá lớn nếu không dùng BigQuery.
+- Power BI: xử lý tốt dataset trung bình–lớn, hiệu năng cao khi import mode; DirectQuery cần tối ưu.
+- Tableau: rất mạnh trong việc xử lý dữ liệu lớn, đặc biệt trong các bài toán cần tương tác nhanh, kéo thả real-time -> mạnh nhất trong 3 tool
+
+Về chi phí: 
+- Looker Studio: miễn phí gần như toàn bộ.
+- Power BI: giá hợp lý hơn Tableau (Power BI Pro/ Premium).
+- Tableau: đắt nhất. Đây gần như là nhược điểm lớn nhất khiến nhiều team dù thích visual của Tableau vẫn chọn Power BI.
+
+
+
+| Tiêu chí                       | **Power BI**                                           | **Looker Studio**                 | **Tableau**                                                      |
+| ------------------------------ | ------------------------------------------------------ | --------------------------------- | ---------------------------------------------------------------- |
+| **Xử lý dữ liệu**              | Mạnh nhất với DAX & Power Query, xử lý tốt dữ liệu raw | Yếu, cần dữ liệu đã group/prepare | Mạnh, LOD Expressions & window calc tốt                          |
+| **Khả năng chia sẻ**           | Trả phí, phụ thuộc license                             | Miễn phí, chia sẻ dễ              | Trả phí cao, phụ thuộc Tableau Server                            |
+| **Tự động cập nhật (refresh)** | Tốt nhưng giới hạn theo license                        | Dễ, linh hoạt với online source   | Tốt, phụ thuộc Server                                            |
+| **Visual & storytelling**      | Cần chỉnh nhiều, visual mặc định không đẹp             | Giao diện đẹp sẵn                 | Xuất sắc, tinh chỉnh sâu, tập trung insight                      |
+| **Xử lý dữ liệu lớn**          | Tốt (Import mode)                                      | Phụ thuộc nguồn                   | Rất tốt, tương tác nhanh                                         |
+| **Chi phí**                    | Trung bình                                             | Miễn phí                          | Đắt nhất                                                         |
+
 
 
 **Kết luận**
-- Power BI là công cụ mạnh mẽ về xử lý và phân tích dữ liệu, thích hợp với bài toán chuyên sâu, dữ liệu phức tạp.
-- Ngược lại, Looker Studio nổi bật với tính chia sẻ, tốc độ triển khai và thẩm mỹ cao, phù hợp khi dữ liệu đã được chuẩn bị sẵn và mục tiêu là truyền tải nhanh, đẹp, và dễ tiếp cận.
+- Đối với doanh nghiệp vừa, dữ liệu lớn -> Nên dùng Power BI (tool này cũng đang rất phổ biến tại Việt Nam)
+- Đối với doanh nghiệp lớn, dữ liệu siêu lớn (big data), cần real-time -> Nên dùng Tableau (tool này rất phổ biến tại các công ty lớn ở nước ngoài)
+- Đối với các doanh nghiệp nhỏ, đặc biệt là các studio game -> Nên dùng Looker Studio (Tool này tuy không xử lý dữ liệu lớn được nhưng nếu là dữ liệu lưu trên Google Bigquery - thường là cloud của dữ liệu game và app thì lại tương thích cực tốt)
 
 
 
