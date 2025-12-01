@@ -30,6 +30,17 @@ Trước khi đến được bước làm dashboard, việc etl là việc khôn
  
  You can see Dashboard at Link: https://lookerstudio.google.com/reporting/9cf74dca-35fa-46bd-97b3-1b62c9b20e3c
 
+<img width="1086" height="749" alt="image" src="https://github.com/user-attachments/assets/49812bd7-3b6c-4e0e-b467-72d930f83742" />
+
+<img width="1090" height="827" alt="image" src="https://github.com/user-attachments/assets/a2fa48c1-5164-4026-b502-8965520d0501" />
+
+<img width="1094" height="824" alt="image" src="https://github.com/user-attachments/assets/8a64e971-4dd7-49e4-8061-bae42f457463" />
+
+<img width="1094" height="826" alt="image" src="https://github.com/user-attachments/assets/da73f554-ad5e-4b7a-b4bf-181872da74ef" />
+
+
+
+
  ## Dashboard in Tableau
 
  <img width="1509" height="804" alt="image" src="https://github.com/user-attachments/assets/b6d3075f-215e-4dd1-813d-70dc3a26febf" />
