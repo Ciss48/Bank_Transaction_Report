@@ -77,7 +77,7 @@ Trước khi đến được bước làm dashboard, việc etl là việc khôn
   - Chọn số cụm bằng Elbow
  
 
-## Kết luận, so sánh 2 công cụ Power BI và Looker Studio 
+## Kết luận, so sánh 3 công cụ Power BI, Looker Studio và Tableau
 Về khả năng xử lý dữ liệu
 - Power BI thể hiện ưu thế rõ rệt ở khả năng xử lý dữ liệu thô (raw data). Các hàm DAX trong Power BI cho phép tính toán phức tạp trực tiếp trên dữ liệu gốc mà không cần tiền xử lý nhiều. Các thao tác như tạo line chart so sánh theo tháng của năm trước, hoặc các phép tính rolling average, cumulative, year-over-year,… đều có thể thực hiện dễ dàng.
 - Ngược lại, trong Looker Studio, việc thực hiện các phép tính tương tự gần như rất khó hoặc bị giới hạn, do công cụ này phụ thuộc nhiều vào dữ liệu đã được xử lý và tổng hợp sẵn (grouped / pre-aggregated). → Vì vậy, Looker Studio phù hợp hơn khi dữ liệu đầu vào đã được chuẩn bị kỹ, chẳng hạn như đã group theo segment, date, hay metric cụ thể từ trước.
